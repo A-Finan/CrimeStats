@@ -18,7 +18,7 @@ body {
 
 
 .form-wrapper {
-    width: 300px;
+    width: 100px;
     margin: auto;
     height: auto;
   }
@@ -33,6 +33,12 @@ body {
         text-align: center;
         display: block;
         margin-top: 10px;
+    }
+
+    button {
+        margin-top: 10px;
+        margin-left: 50px;
+        width: 100px;
     }
 
 

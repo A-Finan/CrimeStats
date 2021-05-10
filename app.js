@@ -15,25 +15,33 @@ app.get('/', function(req, res){
 
 app.post('/', function(req, res) {
     const postcode = req.body.pcodeSearch
-    const location_api_url = "https://api.postcodes.io/postcodes/" + postcode;
+    const location_api_url = "https://api.getthedata.com/postcode/" + postcode;
 
-    https.request(location_api_url, function(response) {
+    console.log(location_api_url)
+
+    https.get(location_api_url, function(response) {
         response.on("data", function(data){
-            const locData = JSON.parse(data);
-            const longitude = (locData.result.longitude)
-            const latitude = (locData.result.latitude)            
+
+            //console.log(data)
+            const locData = data.toString()
+            console.log(locData)           
+            const data_loc = JSON.parse(locData)
+            const longitude = (data_loc.data.longitude)
+            const latitude = (data_loc.data.latitude)
+            console.log(longitude + ' '+ latitude)
+            res.send(longitude + ' '+ latitude)
         })
     })
+    
+    // const police_api_url = "https://data.police.uk/api/crimes-at-location?"
 
-    const police_api_url = "https://data.police.uk/api/crimes-at-location?"
-
-        https.request(police_api_url, function(response) {
-        response.on("data", function(data){
-            const locData = JSON.parse(data);
-            const longitude = (locData.result.longitude)
-            const latitude = (locData.result.latitude)            
-        })
-    })
+    //     https.request(police_api_url, function(response) {
+    //     response.on("data", function(data){
+    //         const locData = JSON.parse(data);
+    //         const longitude = (locData.result.longitude)
+    //         const latitude = (locData.result.latitude)            
+    //     })
+    // })
     
 })
 
