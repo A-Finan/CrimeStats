@@ -1,0 +1,26 @@
+{
+  "name": "crimestats",
+  "version": "1.0.0",
+  "description": "Web App to display Crime Stats",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-Finan/CrimeStats.git"
+  },
+  "author": "Alex Finan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/A-Finan/CrimeStats/issues"
+  },
+  "homepage": "https://github.com/A-Finan/CrimeStats#readme"
+}
