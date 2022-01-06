@@ -2,15 +2,19 @@ const express = require("express");
 const request = require("request");
 const bodyParser = require("body-parser");
 const https = require("https");
+const ejs = require("ejs");
 
 const app = express();
 
-app.use(express.static("public"))
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static(__dirname + '/public'));
+
 
 
 app.get('/', function(req, res){
-    res.sendFile(__dirname + "/index.html");
+    res.render("pages/main.ejs");
 })
 
 app.post('/', function(req, res) {
