@@ -1,0 +1,25 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar.ejs') %>
+
+
+<title>Crime Search</title>
+
+<section class="section-area">
+    <div class="container-fluid">
+        <h1><em>Welcome</em></h1>
+        <h2>Find Crimes in your area</h2>
+    </div>
+    <div class="container-input">
+        <form class="input-form" action="/search" method="post">
+            <div class="form-group form-control-lg">
+                <label for="postcode">Postcode</label>
+                <input type="text" class="form-control" id="postcode" name="postcode" placeholder="e.g. SW1A 1AA" required>
+                <label for="dateSearch">Date</label>
+                <input type="month" class="form-control" id="start" name="dateSearch" min="2018-03" value="2018-03" placeholder="Year Month" required>
+                <button type="submit" id="submit-btn" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<%- include('../partials/footer.ejs') %>
