@@ -1,2 +1,5 @@
-# CrimeStats
-Crime stats website that it makes it searchable to be able to find crime statistics by Area and/or Crime.
+## Crime Statistics
+
+
+
+Website that allows you to enter Post Code and Date to find crimes that have been commited within a 1 mile radius.
